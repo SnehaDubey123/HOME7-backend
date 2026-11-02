@@ -7,8 +7,13 @@ load_dotenv(BASE_DIR / '.env')
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'dev-only-change-this-secret-key')
 DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost',"home7-backend.onrender.com",]
+import os
 
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "home7-backend.onrender.com",
+]
 INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.staticfiles',
